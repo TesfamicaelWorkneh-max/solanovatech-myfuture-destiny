@@ -1,10 +1,10 @@
 import express from "express";
 import cors from "cors";
 import helmet from "helmet";
-import dotenv from "dotenv";
+// import dotenv from "dotenv";
 
-// Load .env file FIRST
-dotenv.config();
+// // Load .env file FIRST
+// dotenv.config();
 
 // Import routes
 import { router as authRoutes } from "./routes/auth.routes.js";
