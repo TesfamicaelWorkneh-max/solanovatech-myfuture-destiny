@@ -95,7 +95,7 @@ const propertySchema = new mongoose.Schema(
   },
   {
     timestamps: true,
-  }
+  },
 );
 
 // Soft delete method
@@ -136,4 +136,4 @@ propertySchema.index({ "location.city": 1 });
 propertySchema.index({ owner: 1 });
 propertySchema.index({ createdAt: -1 });
 
-module.exports = mongoose.model("Property", propertySchema);
+export default mongoose.model("Property", propertySchema);

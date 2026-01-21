@@ -7,8 +7,9 @@ import {
   logout,
   updateDetails,
   updatePassword,
-} from "../controllers/auth.controller";
-import { protect } from "../middlewares/auth.middleware";
+} from "../controllers/auth.controller.js";
+
+import { protect } from "../middlewares/auth.middleware.js";
 
 // Public routes
 router.post("/register", register);

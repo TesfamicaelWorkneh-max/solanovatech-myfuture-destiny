@@ -35,6 +35,7 @@ const userSchema = new mongoose.Schema(
       {
         type: mongoose.Schema.Types.ObjectId,
         ref: "Property",
+        default: [],
       },
     ],
     isActive: {
@@ -48,7 +49,7 @@ const userSchema = new mongoose.Schema(
   },
   {
     timestamps: true,
-  }
+  },
 );
 
 // Hash password before saving
@@ -81,4 +82,4 @@ userSchema.pre(/^find/, function (next) {
   next();
 });
 
-module.exports = mongoose.model("User", userSchema);
+export default mongoose.model("User", userSchema);

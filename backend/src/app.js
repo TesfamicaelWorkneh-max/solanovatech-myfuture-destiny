@@ -2,34 +2,55 @@ import express from "express";
 import cors from "cors";
 import helmet from "helmet";
 import dotenv from "dotenv";
-//Import routes
-import authRoutes from "./routes/auth.routes";
-import propertyRoutes from "./routes/property.routes";
-import adminRoutes from "./routes/admin.routes";
-//import middlewares
-import errorMiddleware from "./middlewares/error.middleware";
+
+// Load .env file FIRST
 dotenv.config();
+
+// Import routes
+import { router as authRoutes } from "./routes/auth.routes.js";
+import { router as propertyRoutes } from "./routes/property.routes.js";
+import { router as adminRoutes } from "./routes/admin.routes.js";
+import { errorHandler } from "./middlewares/error.middleware.js";
+
 const app = express();
 
-//middlwares
+// Security middleware
 app.use(helmet());
-app.cors({
-  origin: process.env.FRONTEND_URL || "http://localhost:3000",
-  credentials: true,
-});
+
+// CORS configuration
+app.use(
+  cors({
+    origin: process.env.FRONTEND_URL || "http://localhost:3000",
+    credentials: true,
+  }),
+);
+
+// Body parsing middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-//Api routes
+// API routes
 app.use("/api/auth", authRoutes);
 app.use("/api/properties", propertyRoutes);
 app.use("/api/admin", adminRoutes);
-// Error handling middleware
-app.use(errorMiddleware);
 
+// Error handling middleware
+app.use(errorHandler);
+// Simple test endpoint
+app.get("/api/test-env", (req, res) => {
+  res.json({
+    cloudinary: {
+      cloudName: process.env.CLOUDINARY_CLOUD_NAME ? "SET" : "NOT SET",
+      apiKey: process.env.CLOUDINARY_API_KEY ? "SET" : "NOT SET",
+      apiSecret: process.env.CLOUDINARY_API_SECRET ? "SET" : "NOT SET",
+    },
+    nodeEnv: process.env.NODE_ENV,
+    port: process.env.PORT,
+  });
+});
 // 404 handler
-app.use("*", (req, res) => {
+app.use((req, res) => {
   res.status(404).json({ message: "Route not found" });
 });
 
-module.exports = app;
+export default app;

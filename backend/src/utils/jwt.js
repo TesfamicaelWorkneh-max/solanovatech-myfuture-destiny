@@ -20,7 +20,7 @@ export const sendTokenResponse = (user, statusCode, res) => {
     sameSite: "strict",
   };
 
-  user.password = undefined; // Remove password from output
+  user.password = undefined; 
 
   res.status(statusCode).cookie("token", token, options).json({
     success: true,

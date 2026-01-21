@@ -1,5 +1,5 @@
-import User from "../models/User";
-import { sendTokenResponse } from "../utils/jwt";
+import User from "../models/User.js";
+import { sendTokenResponse } from "../utils/jwt.js";
 
 // @desc    Register user
 // @route   POST /api/auth/register
