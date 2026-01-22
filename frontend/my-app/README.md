@@ -51,7 +51,7 @@ NEXT_PUBLIC_APP_URL=frontend_url
 1. Clone the repository
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/TesfamicaelWorkneh-max/solanovatech-myfuture-destiny.git
 cd frontend/my-app
 ```
 
@@ -60,3 +60,38 @@ cd frontend/my-app
 npm run dev
 Open http://localhost:3000
 to see the app
+
+### Challenges & Personal Journey
+
+This project was built under very challenging circumstances, which makes it especially meaningful to me.
+
+Due to limited resources, I worked on this project with unstable internet access, frequent connectivity outages, and no paid workspaces or premium tools. Many development sessions were interrupted by power cuts or network failures, forcing me to repeatedly reconfigure environments, reinstall dependencies, and debug issues without online references.
+
+Despite these constraints, I stayed committed to completing the project end-to-end:
+
+Designing a real-world backend API
+
+Implementing authentication and role-based authorization
+
+Building a modern Next.js frontend
+
+Writing clean documentation and API specs
+
+Deploying and testing the backend independently
+
+Every feature in this project represents persistence, self-discipline, and a strong desire to grow as a software engineer—even when conditions were far from ideal.
+
+This experience strengthened my problem-solving skills, patience, and ability to work independently under pressure. It reflects not only my technical abilities, but also my work ethic and resilience.
+
+I am actively seeking an internship opportunity not just to gain experience, but to grow under real mentorship, contribute meaningfully, and finally work in a stable professional environment.
+
+An internship would allow me to:
+
+Learn best practices from experienced engineers
+
+Improve deployment, testing, and scaling skills
+
+Focus fully on building value without constant resource limitations
+
+I am deeply motivated, highly adaptable, and ready to put in the work.
+This project reflects how I handle challenges: I don’t quit — I adapt and continue building.

@@ -136,6 +136,22 @@ Express was chosen over NestJS for this project because:
 
 Backend development is complete.
 
+## Live API
+
+The backend API is deployed and accessible at:
+
+👉 https://solanovatech-myfuture-destiny-4.onrender.com
+
+> Note: The frontend is not deployed yet.  
+> The API can be tested directly using the Postman documentation below.
+
+## API Documentation (Postman)
+
+The complete API documentation, including request/response examples,
+authentication flow, and role-based access, is available here:
+
+👉 https://documenter.getpostman.com/view/49719597/2sBXVkAotN
+
 ## Author
 
-Solanova Tech Backend
+Tesfamicael
