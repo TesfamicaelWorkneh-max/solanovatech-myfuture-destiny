@@ -14,12 +14,7 @@ const nextConfig = {
     NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL,
     NEXT_PUBLIC_APP_URL: process.env.NEXT_PUBLIC_APP_URL,
   },
-  experimental: {
-    appDir: true,
-  },
-  turbopack: {
-    root: "./frontend/my-app",
-  },
+  // Remove experimental.appDir entirely
 };
 
 export default nextConfig;
