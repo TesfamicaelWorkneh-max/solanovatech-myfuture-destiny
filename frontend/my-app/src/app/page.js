@@ -1,5 +1,7 @@
 import Hero from "@/app/components/Hero";
 
+export const dynamic = "force-dynamic";
+
 async function getProperties() {
   try {
     const API_URL =
@@ -7,7 +9,7 @@ async function getProperties() {
     const res = await fetch(
       `${API_URL}/properties?limit=6&status=published&sort=-createdAt`,
       {
-        cache: "no-store",
+        cache: "no-store", // always fresh
       },
     );
 
